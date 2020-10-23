@@ -4,7 +4,7 @@ GDP and Nukes
 
 For this project, the team is exploring the question whether there is a relationship between a country’s GDP and the size of a country’s nuclear weapons arsenal. 
 
-The data we will be examining comes from the Federation of American Scientists published by Our World in Data. 
+The data we will be examining comes from the [Federation of American Scientists published by Our World in Data](https://ourworldindata.org/nuclear-weapons). 
 
 In order to tell our story, we will be exploring a variety of visualizations that may include:
 
