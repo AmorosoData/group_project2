@@ -14,4 +14,5 @@ In order to tell our story, we will be exploring a variety of visualizations tha
 
 In addition, we will also be exploring various [happiness indicators](https://www.kaggle.com/unsdsn/world-happiness). Doing this to examine other relationships between nuclear stockpiles and GDP
 
- Other indicators to be explored (if needed) include: the Human Development Index (HDI), Gross National Income (GNI), and National Suicide Rates.
+ Other indicators to be explored (if needed) include: the Human Development Index (HDI), Gross National Income (GNI), and [National Suicide Rates](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016).
+
