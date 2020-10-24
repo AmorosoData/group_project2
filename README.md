@@ -1,6 +1,15 @@
-# group_project2
-GDP and Nukes
+# Nucular Weapon Arsenal and GDP by Country #
 
+<img src ="https://i.pinimg.com/originals/06/c3/92/06c392b847166a9a671bfcd590d8fff7.gif" width = "1000" height = "150" />
+
+# **Contributors:**
+- Christina
+- Cullen
+- Kelly
+- Nick
+- Patrick
+
+## Overview: Nukes and GDP
 
 For this project, the team is exploring the question whether there is a relationship between a country’s GDP and the size of a country’s nuclear weapons arsenal. 
 
@@ -22,3 +31,26 @@ In addition, we will also be exploring various [happiness indicators](https://ww
 
 Country's with nukes 2014
 china,  france, india, israel, pakistan, russia, united kingdom, united states
+
+
+# WEBSITE IDEAS #
+
+[Scrolling Websites](https://michalsnik.github.io/aos/)
+
+[charts](https://www.chartjs.org/)
+
+[popper code](https://github.com/popperjs/popper-core)
+
+
+
+# Daily Writeup #
+**Cleaning data**
+Dropped unnecessary columns.
+
+**Combining data GDP and Nuke**
+created Dataframes.
+needing to merge data presented problems when trying to merge simply on year. 
+To get around this we created a column Country year. However, after looking at uniques we saw that Russian Federation was used for one df and Russia for another. So we had to replace for all to be Russia.
+
+Disclosure: Nuke production data begins in 1947. However, GDP data begins well before that. Our database year range will be 1960 - 2014.
+
