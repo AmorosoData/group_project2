@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
 import df_to_dict
@@ -20,27 +19,27 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/nuke_app")
 def home():
 
     # Find one record of data from the mongo database
-    listings = mongo.db.listings.find_one()
-
+    listings = mongo.db.by_country.find_one()
+    print(listing)
     # Return template and data
     return render_template("index.html", listings=listings)
 
 
 # Route that will trigger the scrape function
-@app.route("/get_dict")
-def scraper():
+# @app.route("/get_dict")
+# def scraper():
 
-    listings = mongo.db.listings
+#     listings = mongo.db.listings
 
     # Run the scrape function
-    # mars_scraped_data = scrape_mars.scrape()
-    nuke_data = df_to_dict.make_dict()
+    # # mars_scraped_data = scrape_mars.scrape()
+    # nuke_data = df_to_dict.make_dict()
 
-    # Update the Mongo database using update and upsert=True
-    listings.update({}, nuke_data, upsert=True)
+    # # Update the Mongo database using update and upsert=True
+    # listings.update({}, nuke_data, upsert=True)
 
-    # Redirect back to home page
-    return redirect(url_for('home'))
+    # # Redirect back to home page
+    # return redirect(url_for('home'))
 
 
 print('Hello2')
