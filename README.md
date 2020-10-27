@@ -1,6 +1,6 @@
 # Nucular Weapon Arsenal and GDP by Country #
 
-<img src ="https://i.pinimg.com/originals/06/c3/92/06c392b847166a9a671bfcd590d8fff7.gif" width = "1000" height = "150" />
+<img src ="https://i.pinimg.com/originals/06/c3/92/06c392b847166a9a671bfcd590d8fff7.gif" width = "1000" height = "200" />
 
 # **Contributors:**
 - Christina
@@ -53,4 +53,18 @@ needing to merge data presented problems when trying to merge simply on year.
 To get around this we created a column Country year. However, after looking at uniques we saw that Russian Federation was used for one df and Russia for another. So we had to replace for all to be Russia.
 
 Disclosure: Nuke production data begins in 1947. However, GDP data begins well before that. Our database year range will be 1960 - 2014.
+
+
+Requirements
+Website must include
+- Python Flask-powered API
+- HTML/CSS
+- JavaScript
+- One database
+
+Website must feature:
+- One complex, dynamic and interactive custom d3.js visualisation or
+- Multiple leaflet, plotly, or othe d3-wrapper-tupe visualizaitons that update from the same source. 
+
+Website's data:
 
