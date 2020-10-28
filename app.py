@@ -25,22 +25,6 @@ def home():
     return render_template("index.html", listings=listings)
 
 
-# Route that will trigger the scrape function
-# @app.route("/get_dict")
-# def scraper():
-
-#     listings = mongo.db.listings
-
-#     # Run the scrape function
-#     # mars_scraped_data = scrape_mars.scrape()
-#     nuke_data = df_to_dict.make_dict()
-
-#     # Update the Mongo database using update and upsert=True
-#     listings.update({}, nuke_data, upsert=True)
-
-#     # Redirect back to home page
-#     return redirect(url_for('home'))
-
 @app.route("/country/<name>")
 def chinaNukes(name):
     result = mongo.db.by_country.find({"Country":name})
