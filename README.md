@@ -28,6 +28,7 @@ In order to tell our story, we will be exploring a variety of visualizations tha
 In addition, we will also be exploring various [happiness indicators](https://www.kaggle.com/unsdsn/world-happiness). Doing this to examine other relationships between nuclear stockpiles and GDP
 
  Other indicators to be explored (if needed) include: the Human Development Index (HDI), Gross National Income (GNI), and [National Suicide Rates](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016).
+ [Happy Report #2](https://www.kaggle.com/PromptCloudHQ/world-happiness-report-2019?select=world-happiness-report-2019.csv)
 
 Country's with nukes 2014
 china,  france, india, israel, pakistan, russia, united kingdom, united states
