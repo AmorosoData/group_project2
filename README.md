@@ -1,6 +1,6 @@
 # Nucular Weapon Arsenal and GDP by Country #
 
-<img src ="https://i.pinimg.com/originals/06/c3/92/06c392b847166a9a671bfcd590d8fff7.gif" width = "1000" height = "200" />
+<img src ="https://i.pinimg.com/originals/06/c3/92/06c392b847166a9a671bfcd590d8fff7.gif" width = "500" height = "100" />
 
 # **Contributors:**
 - Christina
@@ -8,6 +8,20 @@
 - Kelly
 - Nick
 - Patrick
+
+## Git Notes ##
+1. Before starting 'new' work: git checkout main
+2. git pull origin main
+3. git checkout yourBranchName
+4. git merge main
+5. git add .
+6. git commit -m"detailed message"
+7. git push
+8. do your work
+9. git add .
+10. git commit -m"detailed message"
+11. git push origin yourBranchName
+12. Go to Github and make pull request. (Do this only when confident you want to update main repo)
 
 ## Overview: Nukes and GDP
 
