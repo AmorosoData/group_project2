@@ -19,7 +19,7 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/nukeDB")
 def home():
 
     # Find one record of data from the mongo database
-    listings = mongo.db.by_country.find_one()
+    listings = mongo.db.by_location.find_one() # might need to change this to by_location
     print(listings)
     # Return template and data
     return render_template("index.html", listings=listings)
