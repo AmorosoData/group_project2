@@ -27,7 +27,7 @@ def home():
 
 @app.route("/country/<name>")
 def chinaNukes(name):
-    result = mongo.db.by_country.find({"Country":name})
+    result = mongo.db.by_location.find({"Country":name})
     print(result)
     
     data = []
