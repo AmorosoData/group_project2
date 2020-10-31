@@ -50,6 +50,9 @@ d3.json(countries).then(function (data) {
     countryData = data.data;
     console.log(countryData);
 
+    function circleSize(Quantity_of_Nuclear_Weapons) {
+        return Math.sqrt(Quantity_of_Nuclear_Weapons) * 100;
+    }
     // Create a map object
     var myMap = L.map("map", {
         center: [15.5994, -28.6731],
@@ -65,32 +68,41 @@ d3.json(countries).then(function (data) {
         accessToken: API_KEY
     }).addTo(myMap);
 
+    yearMarkers = [];
+
     // Loop through the cities array and create one marker for each city object
     for (var i = 0; i < countryData.length; i++) {
 
         // Conditionals for countries points
         var color = "";
-        if (countryData[i].Quantity_of_Nuclear_Weapons > 200) {
-            color = "yellow";
-        }
-        else if (countryData[i].Quantity_of_Nuclear_Weapons > 100) {
-            color = "blue";
-        }
-        else if (countryData[i].Quantity_of_Nuclear_Weapons > 90) {
-            color = "green";
-        }
-        else {
+        if (countryData[i].Quantity_of_Nuclear_Weapons > 10000) {
             color = "red";
         }
+        else if (countryData[i].Quantity_of_Nuclear_Weapons > 7500) {
+            color = "orange";
+        }
+        else if (countryData[i].Quantity_of_Nuclear_Weapons > 5000) {
+            color = "yellow";
+        }
+        else if (countryData[i].Quantity_of_Nuclear_Weapons > 1000) {
+            color = "green";
+        }
+        else if (countryData[i].Quantity_of_Nuclear_Weapons > 500) {
+            color = "purple";
+        }
+        else {
+            color = "blue";
+        }
 
-        // Add circles to map
-        L.circle([countryData[i].Latitude, countryData[i].Longitude], {
-            fillOpacity: 0.75,
-            color: "white",
+        
+        yearMarkers.push(L.circle([countryData[i].Latitude, countryData[i].Longitude], {
+            stroke: true,
+            fillOpacity: .06,
+            // color: "white",
             fillColor: color,
-            // Adjust radius
-            radius: countryData[i].Quantity_of_Nuclear_Weapons * 50
-        }).bindPopup("<h1>" + countryData[i].Country_Year + "</h1> <hr> <h3>Points: " + countryData[i].Quantity_of_Nuclear_Weapons + "</h3>").addTo(myMap);
+            radius: circleSize(countryData[i].Quantity_of_Nuclear_Weapons) * 100
+        }).bindPopup("<h1>" + countryData[i].Country_Year + "</h1> <hr> <h3>Quantity of Nuclear Weapons: " + countryData[i].Quantity_of_Nuclear_Weapons + "</h3>").addTo(myMap)
+        );
     }
 });
 
