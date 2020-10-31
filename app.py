@@ -1,7 +1,7 @@
 
 from flask import Flask, render_template, redirect, url_for, jsonify
 from flask_pymongo import PyMongo
-import df_to_dict
+# import df_to_dict
 
 
 
@@ -10,9 +10,6 @@ app = Flask(__name__)
 
 # Use PyMongo to establish Mongo connection
 mongo = PyMongo(app, uri="mongodb://localhost:27017/nukeDB")
-
-
-
 
 # # Route to render index.html template using data from Mongo
 @app.route("/")
@@ -39,8 +36,27 @@ def chinaNukes(name):
         data.append(record)
     #     # if search_term == canonicalized:
     #     #     return jsonify(character)
-
     return jsonify(data), 404
+    
+@app.route("/happy/<geo>")
+def geohappy(geo):
+    result = mongo.db.happyGeo.find({"Country":geo})
+    print(result)
+    
+    datan = []
+    # data = [year.pop(index) for index, year in enumerate(result)] # "Almost there according to Geoff"
+    for record in result:
+    #     # search_term = character["real_name"].replace(" ", "").lower()
+        record.pop('_id', None)
+        print(record)
+        datan.append(record)
+    #     # if search_term == canonicalized:
+    #     #     return jsonify(character)
+
+    return jsonify(datan), 404
+
+   
+
     # return data, 404
     # return "return string", 404
 
