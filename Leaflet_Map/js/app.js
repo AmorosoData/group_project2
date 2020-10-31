@@ -101,7 +101,7 @@ d3.json(countries).then(function (data) {
             // color: "white",
             fillColor: color,
             radius: circleSize(countryData[i].Quantity_of_Nuclear_Weapons) * 100
-        }).bindPopup("<h1>" + countryData[i].Country_Year + "</h1> <hr> <h3>Quantity of Nuclear Weapons: " + countryData[i].Quantity_of_Nuclear_Weapons + "</h3>").addTo(myMap)
+        }).bindPopup("<h1>" + countryData[i].Country_Year + "</h1> <hr> <h3>Quantity of Nuclear Weapons: " + countryData[i].Quantity_of_Nuclear_Weapons + "</h3>" + "</h1> <hr> <h4>GDP: " + countryData[i].GDP + "</h4>" + "</h1> <hr> <h4>Latitude: " + countryData[i].Latitude + "</h4>" + "</h1> <hr> <h4>Longitude: " + countryData[i].Longitude + "</h4>").addTo(myMap)
         );
     }
 });
