@@ -1,0 +1,11 @@
+What we have:
+Multiple visualizations (Cullen's GDP vs Nuke & log of nuke graphs, Nick's map, Kelly's nuke quantity-map)
+Database (Mongo)
+New JS Library (Fade)
+HTML/CSS
+
+What we need to do:
+Interactivity - country/year?
+HTML/CSS
+Fix requirements.txt
+Instructions on how to roll out our site
