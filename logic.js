@@ -31,7 +31,7 @@ function grabData(data) {
     console.log(long);
     console.log(country);
     console.log(year);
-
+  
     // function renderCharts() {
     //     var trace1 = {
     //       type: "scatter",
