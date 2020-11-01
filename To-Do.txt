@@ -7,5 +7,7 @@ HTML/CSS
 What we need to do:
 Interactivity - country/year?
 HTML/CSS
-Fix requirements.txt
+
+Done:
+Fix requirements 
 Instructions on how to roll out our site
