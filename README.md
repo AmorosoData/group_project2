@@ -82,3 +82,21 @@ Website must feature:
 
 Website's data:
 
+Rolling Out Website: 
+
+- Create New Project Environment 
+    - Run this command: conda create -n <environmentName>--file requirements.txt python=3.6
+
+    - If "ModuleNotFoundError: No module named 'library name'" error arises:
+        1. <conda activate environmentName>
+        2. <conda install -c anaconda ipykernel>
+        3. <python -m ipykernel install --user --name environmentName>
+        4. <conda install (library name ex. pymongo)>
+        5. <pip freeze > requirements.txt>
+        6. (In Jupyter Notebook) Change Kernel from python 3 to project_env
+ 
+
+     
+    
+
+
