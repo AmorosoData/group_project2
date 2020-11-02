@@ -38,24 +38,28 @@ def chinaNukes(name):
     #     #     return jsonify(character)
     return jsonify(data), 404
     
-@app.route("/happy/<geo>")
-def geohappy(geo):
-    result = mongo.db.happyGeo.find({"Country":geo})
-    print(result)
+# @app.route("/happy/<geo>")
+# def geohappy(geo):
+#     result = mongo.db.happyGeo.find({"Country":geo})
+#     print(result)
     
-    datan = []
-    # data = [year.pop(index) for index, year in enumerate(result)] # "Almost there according to Geoff"
-    for record in result:
-    #     # search_term = character["real_name"].replace(" ", "").lower()
-        record.pop('_id', None)
-        print(record)
-        datan.append(record)
-    #     # if search_term == canonicalized:
-    #     #     return jsonify(character)
+    # datan = []
+    # # data = [year.pop(index) for index, year in enumerate(result)] # "Almost there according to Geoff"
+    # for record in result:
+    # #     # search_term = character["real_name"].replace(" ", "").lower()
+    #     record.pop('_id', None)
+    #     print(record)
+    #     datan.append(record)
+    # #     # if search_term == canonicalized:
+    # #     #     return jsonify(character)
 
-    return jsonify(datan), 404
+    # return jsonify(datan), 404
 
-   
+@app.route("/happy")
+def geohappyall():
+    happyData = mongo.db.happyGeo
+    query = list(happyData.find({ },{ '_id': 0}))
+    return jsonify(query)
 
     # return data, 404
     # return "return string", 404
