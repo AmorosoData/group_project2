@@ -1,7 +1,7 @@
 
 
-d3.json('data/happy_json.json').then(data => {
-
+d3.json('/happy').then(data => {
+console.log(data)
   var myMap = L.map("nickMap", {
     center: [37.09, -95.91],
     zoom: 2
@@ -17,7 +17,7 @@ d3.json('data/happy_json.json').then(data => {
     }).addTo(myMap);
 
 
-    result.forEach(feature => {
+    data.forEach(feature => {
       L.marker([feature.Latitude, feature.Longitude])
         .bindPopup("<h1>" + feature.Country +
         "</h3><hr><p>" + feature.Healthy_life_expectancy + "</p>" +
@@ -29,3 +29,4 @@ d3.json('data/happy_json.json').then(data => {
       ;
     })
 })
+

@@ -3,8 +3,12 @@ body {
   margin: 0;
 }
 
-#map,
+/* #map,
 body,
 html {
   height: 90%;
+} */
+
+#nickMap {
+  height: 300px;
 }
