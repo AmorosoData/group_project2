@@ -4,7 +4,6 @@ from flask_pymongo import PyMongo
 # import df_to_dict
 
 
-
 # Create an instance of Flask
 app = Flask(__name__)
 
@@ -16,54 +15,39 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/nukeDB")
 def home():
 
     # Find one record of data from the mongo database
-    listings = mongo.db.by_location.find_one() # might need to change this to by_location
+    # might need to change this to by_location
+    listings = mongo.db.by_location.find_one()
     print(listings)
     # Return template and data
     return render_template("index.html", listings=listings)
 
 
-@app.route("/country/<name>")
-def chinaNukes(name):
-    result = mongo.db.by_location.find({"Country":name})
+@app.route("/country")
+def Nukes():
+    nukeData = mongo.db.by_location
+    result = list(nukeData.find({}))
     print(result)
-    
-    data = []
-    # data = [year.pop(index) for index, year in enumerate(result)] # "Almost there according to Geoff"
-    for record in result:
-    #     # search_term = character["real_name"].replace(" ", "").lower()
-        record.pop('_id', None)
-        print(record)
-        data.append(record)
-    #     # if search_term == canonicalized:
-    #     #     return jsonify(character)
-    return jsonify(data), 404
-    
-# @app.route("/happy/<geo>")
-# def geohappy(geo):
-#     result = mongo.db.happyGeo.find({"Country":geo})
-#     print(result)
-    
-    # datan = []
-    # # data = [year.pop(index) for index, year in enumerate(result)] # "Almost there according to Geoff"
-    # for record in result:
-    # #     # search_term = character["real_name"].replace(" ", "").lower()
-    #     record.pop('_id', None)
-    #     print(record)
-    #     datan.append(record)
-    # #     # if search_term == canonicalized:
-    # #     #     return jsonify(character)
 
-    # return jsonify(datan), 404
+    data = []
+
+    for record in result:
+
+        record.pop('_id', None)
+
+        data.append(record)
+
+    return jsonify(result)
+
 
 @app.route("/happy")
 def geohappyall():
     happyData = mongo.db.happyGeo
-    query = list(happyData.find({ },{ '_id': 0}))
+    query = list(happyData.find({}, {'_id': 0}))
     return jsonify(query)
 
     # return data, 404
     # return "return string", 404
 
+
 if __name__ == "__main__":
     app.run(debug=True)
- 
