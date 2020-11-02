@@ -38,6 +38,38 @@ def Nukes():
 
     return jsonify(result)
 
+@app.route("/log")
+def Nukes():
+    nukeData = mongo.db.log_collection
+    result = list(nukeData.find({}))
+    print(result)
+
+    data = []
+
+    for record in result:
+
+        record.pop('_id', None)
+
+        data.append(record)
+
+    return jsonify(result)
+
+@app.route("/gdp")
+def Nukes():
+    nukeData = mongo.db.d3_collection
+    result = list(nukeData.find({}))
+    print(result)
+
+    data = []
+
+    for record in result:
+
+        record.pop('_id', None)
+
+        data.append(record)
+
+    return jsonify(result)
+
 
 @app.route("/happy")
 def geohappyall():
