@@ -1,4 +1,9 @@
-
+// var customIcon = L.icon({
+//   iconURL: './images/emoticon-outline.png',
+//   iconSize: [38,95],
+//   iconAnchor: [22,94],
+//   popupAnchor: 
+// })
 
 d3.json('/happy').then(data => {
 console.log(data)
@@ -19,14 +24,6 @@ console.log(data)
 
     data.forEach(feature => {
       L.marker([feature.Latitude, feature.Longitude])
-        .bindPopup("<h1>" + feature.Country +
-        "</h3><hr><p>" + feature.Healthy_life_expectancy + "</p>" +
-        "</h3><hr><p>" + feature.Freedom_to_make_life_choices + "</p>" +
-        "</h3><hr><p>" + feature.Generosity + "</p>" +
-        "</h3><hr><p>" + feature.Perceptions_of_corruption + "</p>")
-        .addTo(myMap);
-
-      ;
+      .bindPopup(`<h1>${feature.Country}</h1> <hr>Healthy Life Expectancy: ${feature.Healthy_life_expectancy } <hr>Freedom to make life choices: ${feature.Freedom_to_make_life_choices} <hr>Generosity: ${feature.Generosity} <hr>Perceptions of Corruption: ${feature.Perceptions_of_corruption }`).addTo(myMap);
     })
 })
-
