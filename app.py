@@ -39,7 +39,7 @@ def Nukes():
     return jsonify(result)
 
 @app.route("/log")
-def Nukes():
+def logNukes():
     nukeData = mongo.db.log_collection
     result = list(nukeData.find({}))
     print(result)
@@ -55,7 +55,7 @@ def Nukes():
     return jsonify(result)
 
 @app.route("/gdp")
-def Nukes():
+def gdpNukes():
     nukeData = mongo.db.d3_collection
     result = list(nukeData.find({}))
     print(result)
