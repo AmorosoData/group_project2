@@ -1,4 +1,6 @@
-d3.json('happy').then(data => {
+
+
+d3.json('data/happy_json.json').then(data => {
 
   var myMap = L.map("nickMap", {
     center: [37.09, -95.91],
