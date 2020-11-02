@@ -6,7 +6,7 @@
 // })
 
 d3.json('/happy').then(data => {
-console.log(data)
+console.log(data);
   var myMap = L.map("nickMap", {
     center: [37.09, -95.91],
     zoom: 2
