@@ -26,7 +26,7 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Load data from assets/data/data.csv
-d3.csv("assets/data/log_nukes.csv").then(data => {
+d3.json("/log").then(data => {
 
   // Print the data
   console.log(data);
