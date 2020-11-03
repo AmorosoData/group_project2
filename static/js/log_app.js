@@ -16,7 +16,7 @@ var chartWidth = svgWidth - margin.left - margin.right;
 var chartHeight = svgHeight - margin.top - margin.bottom;
 
 // Select body, append SVG area to it, and set its dimensions
-var svg = d3.select("#scatter")
+var svg = d3.select("#log_scatter")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
@@ -26,7 +26,7 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Load data from assets/data/data.csv
-d3.csv("assets/data/log_nukes.csv").then(data => {
+d3.json("/log").then(data => {
 
   // Print the data
   console.log(data);
@@ -104,7 +104,7 @@ d3.csv("assets/data/log_nukes.csv").then(data => {
     .attr("x", 0 + (chartWidth / 2))
     .attr("dx", "1em")
     .classed("axis-text", true)
-    .text("Number of Nukes");
+    .text("Log (Number of Nukes)");
 
 
   // Append Years  

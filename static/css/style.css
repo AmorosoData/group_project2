@@ -1,13 +1,32 @@
+
 body {
   padding: 0;
   margin: 0;
 }
 
-/* #map,
-body,
-html {
-  height: 90%;
-} */
+p {
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+}
+
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/image.png");
+  /* Set a specific height */
+  height: 100%;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  color: white;
+}
 
 #nickMap {
   height: 300px;
@@ -20,4 +39,23 @@ html {
     border-radius: 8px;
     height: 400px;  /* or as desired */
     width: 100%;  
+}
+
+#nickMap {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 400px;  /* or as desired */
+  width: 100%;  
+}
+
+#footer {
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%; /* Set the fixed height of the footer here */
+  height: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: right;
+  background-color: #f5f5f5;
 }
