@@ -13,8 +13,8 @@
   <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin="" /> -->
-
   <link rel="stylesheet" href="static/css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,6 +24,15 @@
       <h1>Nuclear Countries Happiness Report</h1>
       <!-- <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape</a></p> -->
     </div>
+    
+    <div class="hero-image">
+      <img src="../static/images/image.png" alt="DrStrangelove" width="90%" height="90%">
+      <div class="hero-text">
+        <h1>Nuclear Development vs. Social Development</h1>
+        <p>by Kelly Shull, Cullen Andrews, Nick Amoroso, Christina Kaady, and Patrick Leon</p>
+      </div>
+    </div>
+
     <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
       <div class="col-xs-12  col-md-9">
 
@@ -48,26 +57,28 @@
         <hr />
 
         <div class="row">
-          <div class="col-md-8" style='border: 1px solid black'>
-            <div id="map"></div>
+          <div class="col-md-9">
+            <div id="map" data-aos="fade-right"></div>
           </div>
         </div>
-        <h4>Interactive graph of number of nuclear weapons by country and year.</h4>
+        <strong data-aos="fade-right">Interactive graph of number of nuclear weapons by country and year.</strong>
 
         <hr />
 
-        <div id="nickMap" style="height: 300px"></div>
+        <div id="nickMap" style="height: 400px" data-aos="fade-left"></div>
+        <strong data-aos="fade-left">Exploratory graph of happiness metrics by country as of 2020.</strong>
 
-        <div id="nickMap" style="height: 400px;"></div>
+        <hr />
+
         <div class="row"></div>
         <div class="col-xs-12  col-md-9">
-          <div class="article">
-            <h2>Nuculear Countries Happiness Report</h2>
+          <div class="article" data-aos="fade-left">
+            <h2>Nuclear Countries Happiness Report</h2>
             <p>The rankings of World Happiness Report 2020 used data from the Gallup World Poll. The rankings are based
               on
               answers to life evaluation questions using a scale of 0 - 10. The sample size range between 1,000 people
               and
-              3,000 people per country.
+              3,000 people per country.</p>
           </div>
         </div>
       </div>
